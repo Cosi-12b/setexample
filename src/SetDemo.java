@@ -24,6 +24,8 @@ public class SetDemo {
        System.out.println("Sorry! You loose");
   }
 
+  // Create a winning number by having NUMBERS integers, each 
+  // between 0 and 40. Each number must be unique.
   public static Set<Integer> createWinningNumbers() {
     Set<Integer> winningNumbers = new TreeSet<Integer>();
     Random r = new Random();
@@ -34,7 +36,8 @@ public class SetDemo {
     return winningNumbers;
   }
 
-  // reads the player's lottery ticket from the console
+  // reads the player's lottery ticket from the console. Collect 6
+  // unique numbers. Little bug here. 
   public static Set<Integer> getTicket() {
     Set<Integer> ticket = new TreeSet<Integer>();
     Scanner console = new Scanner(System.in);
