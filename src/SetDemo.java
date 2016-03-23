@@ -40,11 +40,12 @@ public class SetDemo {
   // unique numbers. Little bug here. 
   public static Set<Integer> getTicket() {
     Set<Integer> ticket = new TreeSet<Integer>();
-    Scanner console = new Scanner(System.in);
-    System.out.print("\nType your " + NUMBERS + " unique lotto numbers: ");
-    while (ticket.size() < NUMBERS) {
-      int number = console.nextInt();
-      ticket.add(number);
+    try (Scanner console = new Scanner(System.in)) {
+      System.out.print("\nType your " + NUMBERS + " unique lotto numbers: ");
+      while (ticket.size() < NUMBERS) {
+        int number = console.nextInt();
+        ticket.add(number);
+      }
     }
     return ticket;
   }
